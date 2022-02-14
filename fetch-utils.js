@@ -10,7 +10,7 @@ export function getUser() {
 
 export async function signupUser(email, password) {
     const resp = await client.auth.signUp({ email, password });
-    console.log(resp);
+    // console.log(resp);
     return resp;
 }
 
@@ -27,12 +27,13 @@ export async function redirectIfLoggedIn() {
     // console.log(user);
     if (user){
         location.replace('/other-page');
-        return user;
     }
 }
 
 export async function logout() {}
 
+// eslint-disable-next-line no-unused-vars
 function checkError({ data, error }) {
+    // eslint-disable-next-line no-console
     return error ? console.error(error) : data;
 }

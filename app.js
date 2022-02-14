@@ -13,7 +13,7 @@ const signUpPassword = document.getElementById('sign-up-password');
 // Redirect to /other-page when page loads if user is authenticated
 signUpForm.addEventListener('submit', async (e)=>{
     e.preventDefault();
-    console.log(signUpEmail.value, signUpPassword.value);
+    // console.log(signUpEmail.value, signUpPassword.value);
     await signupUser(signUpEmail.value, signUpPassword.value);
     redirectIfLoggedIn();
 });
@@ -21,6 +21,6 @@ signUpForm.addEventListener('submit', async (e)=>{
 signInForm.addEventListener('submit', async (e)=>{
     e.preventDefault();
     await signInUser(signInEmail.value, signInPassword.value);
-    console.log(signInEmail.value, signInPassword.value);
+    // console.log(signInEmail.value, signInPassword.value);
     redirectIfLoggedIn();
 });
