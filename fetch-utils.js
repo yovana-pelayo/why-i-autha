@@ -30,7 +30,10 @@ export async function redirectIfLoggedIn() {
     }
 }
 
-export async function logout() {}
+export async function logout() {
+    await client.auth.signOut();
+    location.replace('/');
+}
 
 // eslint-disable-next-line no-unused-vars
 function checkError({ data, error }) {
